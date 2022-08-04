@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7de6e485c3.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light navbar-custom">
+    <div class="container">
+      <!-- Left -->
+      <a class="navbar-brand me-5" href="/">
+        <img src="/assets/img/logo_dw.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add-project">Add Project</a>
+          </li>
+        </ul>
+        <!-- End Left -->
+        <!-- Right -->
+        <a class="btn btn-dark" href="/contact">Contact Me</a>
+        <!-- End Right -->
+      </div>
+    </div>
+  </nav>
+  <div class="bg-secondary bg-opacity-25" style="min-height: 92vh">
+    <div class="container">
+      <h2 class="text-center fw-bold py-4">{{project.name}}</h2>
+      <div class="row mb-5">
+        <div class="col-6">
+          <img src="{{project.image}}" alt="" class="w-100" style="height: 320px;">
+        </div>
+        <div class="col-6 ps-5">
+          <div class="row mb-5">
+            <h3 class="mb-4 fw-semibold">Duration</h3>
+            <div class="row mb-3">   
+              <img class="col-1" src="/assets/img/calendar_events_schedule_icon.png" alt="">
+              <p class="col my-auto fw-semibold">{{project.start_date}} - {{project.end_date}}</p>
+            </div>
+            <div class="row">
+              <img class="col-1" src="/assets/img/clock_hour_timer_watch_icon.png" alt="">
+              <p class="col my-auto fw-semibold">{{project.duration}}</p>
+            </div>
+            </div>
+            <div class="row">
+              <h3 class="mb-4 fw-semibold">Technologies</h3>
+              <div class="row mb-3">
+                {{#if project.reactjs}}
+                <img class="col-1" src="/assets/img/reactjs_icon.png" alt="">
+                <p class="col my-auto fw-semibold">React Js</p>
+                {{/if}}
+                {{#if project.typescript}}
+                <img class="col-1" src="/assets/img/typescript_icon.png" alt="">
+                <p class="col my-auto fw-semibold">Typescript</p>
+                {{/if}}
+              </div>
+              <div class="row">
+                  {{#if project.nodejs}}
+                  <img class="col-1" src="/assets/img/9035101_logo_nodejs_icon.png" alt="">
+                  <p class="col my-auto fw-semibold">Node Js</p>
+                  {{/if}}
+                  {{#if project.nextjs}}
+                  <img class="col-1" src="/assets/img/nextjs_icon.png" alt="">
+                  <p class="col my-auto fw-semibold">Next Js</p>
+                  {{/if}}
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="pb-5">
+        {{project.description}}
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

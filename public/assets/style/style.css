@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  color: black;
+}
+
+/* Navbar */
+.navbar-custom {
+  height: 8vh;
+}
+.active-custom {
+  color: black !important;
+  font-weight: bold !important; 
+}
+
+/* Containers */
+.content-container {
+  height: 92vh;
+  background-color: rgb(230, 230, 230);
+}
+
+/* Home */
+.profile-left {
+  flex: 75%;
+}
+.profile-right {
+  flex: 25%;
+}
+.btn-oval {
+  border-radius: 20px !important;
+  width: 120px;
+  padding: 2px 0 !important;
+}
+.tech-item {
+  width: 10%;
+}

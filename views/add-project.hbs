@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="./assets/style/style.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7de6e485c3.js" crossorigin="anonymous"></script>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-custom">
+      <div class="container">
+        <!-- Left -->
+        <a class="navbar-brand me-5" href="/">
+          <img src="./assets/img/logo_dw.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active-custom" href="/add-project">Add Project</a>
+            </li>
+          </ul>
+          <!-- End Left -->
+          <!-- Right -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+            {{#if isLogin}}
+            <li class="nav-item">
+              <span class="nav-link">Hallo, {{user.name}}</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            {{/if}}
+          </ul>
+          <a class="btn btn-dark" href="/contact">Contact Me</a>
+          <!-- End Right -->
+        </div>
+      </div>
+    </nav>
+    <div class="content-container d-flex justify-content-center align-items-center">
+      <form class="row g-3 w-25" action="/add-project" method="post" enctype="multipart/form-data">
+        <h2 class="text-center fw-bold my-1">ADD MY PROJECT</h2>
+        <div class="col-12">
+          <label for="project-name" class="fw-bold">Project Name</label>
+          <input type="text" class="form-control shadow" id="project-name" name="name">
+        </div>
+        <div class="col-6">
+          <label for="start-date" class="fw-bold">Start Date</label>
+          <input type="date" class="form-control shadow" id="start-date" name="start_date">
+        </div>
+        <div class="col-6">
+            <label for="end-date" class="fw-bold">End Date</label>
+            <input type="date" class="form-control shadow" id="end-date" name="end_date">
+        </div>
+        <div class="col-12">
+          <label for="description" class="fw-bold">Description</label>
+          <textarea class="form-control shadow" id="description" rows="4" name="description"></textarea>
+        </div> 
+          <label class="fw-bold">Technologies</label>          
+        <div class="col-6 mt-2">
+          <input class="form-check-input shadow-sm me-1" type="checkbox" id="nodejs" name="technologies" value="nodejs">
+          <label class="form-check-label fw-semibold text-secondary" for="nodejs">Node Js</label>
+        </div>
+        <div class="col-6 mt-2">
+          <input class="form-check-input shadow-sm me-1" type="checkbox" id="reactjs" name="technologies" value="reactjs">
+          <label class="form-check-label fw-semibold text-secondary" for="reactjs">React Js</label>
+        </div>
+        <div class="col-6 mt-2">
+          <input class="form-check-input shadow-sm me-1" type="checkbox" id="nextjs" name="technologies" value="nextjs">
+          <label class="form-check-label fw-semibold text-secondary" for="nextjs">Next Js</label>
+        </div>
+        <div class="col-6 mt-2">
+          <input class="form-check-input shadow-sm me-1" type="checkbox" id="typescript" name="technologies" value="typescript">
+          <label class="form-check-label fw-semibold text-secondary" for="typescript">TypeScript</label>
+        </div>
+        <div class="col-12 mb-4">
+          <label class="fw-bold" for="image">Upload Image</label>
+          <input type="file" class="form-control shadow" id="image" name="image">
+        </div>
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-dark btn-oval">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

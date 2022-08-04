@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7de6e485c3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light navbar-custom">
+      <div class="container">
+        <!-- Left -->
+        <a class="navbar-brand me-5" href="/">
+          <img src="./assets/img/logo_dw.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/add-project">Add Project</a>
+            </li>
+          </ul>
+          <!-- End Left -->
+          <!-- Right -->
+          <a class="btn btn-dark" href="/contact">Contact Me</a>
+          <!-- End Right -->
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="content-container d-flex justify-content-center align-items-center">
+        <form class="row g-2 w-25" action="">
+          <h2 class="text-center fw-bold my-1">GET IN TOUCH</h2>
+          <div class="col-12">
+            <label for="input-name" class="fw-semibold">Name</label>
+            <input type="text" class="form-control shadow" id="input-name">
+          </div>
+          <div class="col-12">
+            <label for="input-email" class="fw-semibold">Email</label>
+            <input type="email" class="form-control shadow" id="input-email">
+          </div>
+          <div class="col-12">
+            <label for="input-phone" class="fw-semibold">Phone Number</label>
+            <input type="text" class="form-control shadow" id="input-phone">
+          </div>
+          <div class="col-12">
+            <label for="input-subject" class="fw-semibold">Subject</label>
+            <select class="form-select shadow" id="input-subject">
+              <option value="" hidden></option>
+              <option>Let's Talk</option>
+              <option>Let's Collaboration</option>
+              <option>I am Hiring</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="input-message" class="fw-semibold">Your Message</label>
+            <textarea class="form-control shadow" id="input-message" rows="7"></textarea>
+          </div>
+          <div class="d-flex justify-content-end mt-4">
+            <button class="btn btn-dark btn-oval" type="button" onclick="submitForm()">Submit</button>
+          </div>
+        </form>
+    </div>
+    <script src="./assets/script/contact.js"></script>
+  </body>
+</html>
